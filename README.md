@@ -56,6 +56,25 @@ Namely
 5. $git remote add origin https://github.com/BreaizhZut/datasciencecoursera.git \# That just associate the remote repo url to the local repo
 6. $git push -u origin master \# Simply upload my local repo content to the remote server as the master branch 
 
+What I did forget is to add the HelloWorld.md to the repo. The reason why is that I though this file that I created prior to doing the git init would be added to the repo. That is good to know, the repo is empty at initialization whatever files are coantained in the directory.
+So That is good I now have to do the following
+
+1. $git add HelloWorld.md
+2. $git commit -m "Second commit. Adding the missing HelloWorld.md and edited README.md"
+3. $git push origin master
+
+Once again something went wrong, it is good to have added the new file and it worked perfectly but, the commit didn't take into account the changes I made to this README.md. 
+So it seem any changes need to be staged before commit.
+Meaning git add must be run on each file before a commit.
+
+1. $git status \#Tell me whether my working directory is up to date, let me know if some file were edited and not staged
+2. $git add README.md 
+3. $git status \# Should confirm that the latest changes to this file were staged
+4. $git commit -m "" \# Now that all changed are staged I can commit
+5. $git status \# Should now not list any changes to be commited
+6. $git diff \# show all differences from the master branch should show nothing
+7. $git push -u origin master \# Should get this mess sorted once and for all
+
 ## Conclusion
 
 I hope this does look good on GitHub, and that I didn't do to many spelling mistakes. No much hope about the later... 
